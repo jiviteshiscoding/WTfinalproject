@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Survey Commission</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+
+<header>
+    <div id="header">
+        <div class="brand-section">
+            <img src="govt.png" width="120" height="50" alt="Government Logo">
+            <h1>Survey Commission of India</h1>
+        </div>
+
+        <div id="naviga">
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="why.html">Why This Website?</a>
+                <a href="about.html">About</a>
+                <a href="survey.html">Survey</a>
+                <a href="feedback.html" class="active">Feedback</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="main">
+    <h1>Citizen Feedback Form</h1>
+
+    <div id="feedbackStatus" class="status-msg"></div>
+
+    <form id="feedbackForm" action="feedback.php" method="POST">
+        <table class="form-table" border="1" cellpadding="10">
+            <tr>
+                <td><label for="name">Full Name:</label></td>
+                <td>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email Address:</label></td>
+                <td>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="message">Your Feedback / Query:</label></td>
+                <td>
+                    <textarea id="message" name="message" rows="5" placeholder="Share your suggestions, complaints, or comments..." required></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input class="button" type="submit" value="Submit">
+                    <input class="button" type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; color: #555555; max-width: 650px;">
+        <em>* Note: Your feedback helps us evaluate and improve public services. When tested on a PHP web server, this form connects to feedback.php; in static mode, submissions are verified locally.</em>
+    </p>
+</section>
+
+<footer>
+    <div class="footer-nav">
+        <a href="index.html">Home</a> |
+        <a href="why.html">Why This Website?</a> |
+        <a href="about.html">About</a> |
+        <a href="survey.html">Survey</a> |
+        <a href="feedback.html">Feedback</a> |
+        <a href="login.html">Login</a>
+    </div>
+    <p>Survey Commission of India — Web Technologies College Mini Project</p>
+    <p>&copy; Government of India</p>
+</footer>
+
+<script>
+    const feedbackForm = document.getElementById('feedbackForm');
+    const feedbackStatus = document.getElementById('feedbackStatus');
+
+    feedbackForm.addEventListener('submit', function(event) {
+        // If opened locally via file protocol, provide a clean demo confirmation
+        if (window.location.protocol === 'file:') {
+            event.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            feedbackStatus.className = 'status-msg success';
+            feedbackStatus.style.display = 'block';
+            feedbackStatus.textContent = 'Thank you, ' + name + '! Your feedback has been recorded successfully (Static Demo).';
+            feedbackForm.reset();
+        }
+    });
+
+    feedbackForm.addEventListener('reset', function() {
+        feedbackStatus.style.display = 'none';
+        feedbackStatus.textContent = '';
+    });
+</script>
+
+</body>
+</html>

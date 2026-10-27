@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Survey Commission</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+
+<header>
+    <div id="header">
+        <div class="brand-section">
+            <img src="govt.png" width="120" height="50" alt="Government Logo">
+            <h1>Survey Commission of India</h1>
+        </div>
+
+        <div id="naviga">
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="why.html">Why This Website?</a>
+                <a href="about.html">About</a>
+                <a href="survey.html">Survey</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="login.html" class="active">Login</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="main">
+    <h1>Portal Login</h1>
+
+    <div id="loginMessage" class="status-msg"></div>
+
+    <form id="loginForm">
+        <table class="form-table" border="1" cellpadding="10">
+            <tr>
+                <td><label for="username">Username or Email:</label></td>
+                <td>
+                    <input type="text" id="username" name="username" placeholder="Enter username or email" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="role">Role:</label></td>
+                <td>
+                    <select id="role" name="role" required>
+                        <option value="">-- Select Role --</option>
+                        <option value="Administrator">Administrator</option>
+                        <option value="Survey Officer">Survey Officer</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input class="button" type="submit" value="Login">
+                    <input class="button" type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; color: #555555; max-width: 650px;">
+        <em>* Note: This is an academic simulation login portal. Enter any demo username, password, and select your role to test the login verification.</em>
+    </p>
+</section>
+
+<footer>
+    <div class="footer-nav">
+        <a href="index.html">Home</a> |
+        <a href="why.html">Why This Website?</a> |
+        <a href="about.html">About</a> |
+        <a href="survey.html">Survey</a> |
+        <a href="feedback.html">Feedback</a> |
+        <a href="login.html">Login</a>
+    </div>
+    <p>Survey Commission of India — Web Technologies College Mini Project</p>
+    <p>&copy; Government of India</p>
+</footer>
+
+<script>
+    const loginForm = document.getElementById('loginForm');
+    const loginMessage = document.getElementById('loginMessage');
+
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value.trim();
+        const role = document.getElementById('role').value;
+
+        if (username === '' || role === '') {
+            loginMessage.className = 'status-msg info';
+            loginMessage.style.display = 'block';
+            loginMessage.textContent = 'Please enter both username and role.';
+            return;
+        }
+
+        loginMessage.className = 'status-msg success';
+        loginMessage.style.display = 'block';
+        loginMessage.textContent = 'Login successful! Welcome, ' + username + ' (' + role + '). [Demo Mode]';
+    });
+
+    loginForm.addEventListener('reset', function() {
+        loginMessage.style.display = 'none';
+        loginMessage.textContent = '';
+    });
+</script>
+
+</body>
+</html>

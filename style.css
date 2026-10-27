@@ -1,0 +1,75 @@
+header {
+    background-color: bisque;
+    padding: 20px;
+    display: flex;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+h1 {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+}
+
+.main {
+    padding: 20px;
+}
+
+.main > h1 {
+    font-size: 32px;
+}
+
+
+.hobby {
+    display: block;
+    margin: 6px 0;
+    font-weight: normal;
+}
+
+.button {
+    padding: 8px 18px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(244, 191, 126);
+    padding: 5px;
+    margin: 8px;
+    align-items: center;
+    font-size: 20px;
+}
+
+#about {
+    background-image: url('people.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+    
+  #scheme img{
+    margin:20px;
+    background-color: aliceblue;
+}
+#about h1{
+    color:aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:center;
+    
+
+
+}
+#about p{
+    color:antiquewhite;
+    
+}
+#about{
+    align-items:center;
+}

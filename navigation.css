@@ -1,0 +1,354 @@
+/* 
+   Navigation and Static Styling - Survey Commission Mini Project
+   Clean, simple, static styling suitable for second-year college submission.
+   No animations, no complex columns, purely static and readable.
+*/
+
+/* --- Header & Navigation Bar --- */
+header {
+    background-color: bisque;
+    padding: 15px 20px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.brand-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-section h1 {
+    font-size: 30px;
+    margin: 0;
+    color: #222222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#naviga, .navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #4a2810;
+    background-color: #fffaf0;
+    padding: 7px 13px;
+    border: 1px solid #c89666;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: #d49a6a;
+    color: #ffffff;
+}
+
+.navbar a.active {
+    background-color: #7b3811;
+    color: #ffffff;
+    border-color: #552408;
+}
+
+/* --- Simple Static Home Page Sections --- */
+#scheme {
+    background-color: #fdf6ec;
+    border-bottom: 2px solid #ecd5be;
+    padding: 20px;
+}
+
+.scheme-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.scheme-box img {
+    margin: 0;
+    border: 2px solid #d4a373;
+    border-radius: 4px;
+}
+
+.scheme-text {
+    flex: 1;
+    min-width: 280px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.scheme-text h2 {
+    color: #7b3811;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.scheme-text p {
+    color: #333333;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.home-section {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-section h2 {
+    color: #7b3811;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.home-section p {
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.home-section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.home-section li {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+/* About Section on Home with people.jpg background */
+#about {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#about h1 {
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+#about p {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 20px;
+    border-radius: 4px;
+}
+
+/* --- Simple Content Card for why.html and about.html --- */
+.content-box {
+    background-color: #ffffff;
+    border: 1px solid #d4a373;
+    border-radius: 4px;
+    padding: 20px 25px;
+    max-width: 800px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.content-box h2 {
+    color: #7b3811;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid bisque;
+    padding-bottom: 5px;
+}
+
+.content-box h3 {
+    color: #4a2810;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+.content-box p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.content-box ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.content-box li {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.badge {
+    background-color: bisque;
+    color: #7b3811;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* --- Form Tables matching survey.html --- */
+.form-table {
+    border-collapse: collapse;
+    width: 650px;
+    max-width: 100%;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 15px;
+}
+
+.form-table td {
+    border: 1px solid black;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.form-table td:first-child {
+    width: 180px;
+    font-weight: bold;
+    background-color: #fbf5ee;
+}
+
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table input[type="password"],
+.form-table input[type="tel"],
+.form-table select,
+.form-table textarea {
+    width: 95%;
+    padding: 7px;
+    box-sizing: border-box;
+    border: 1px solid #777777;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.button {
+    padding: 7px 16px;
+    margin: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #fce4c8;
+    border: 1px solid #b07d50;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+.button:hover {
+    background-color: #d49a6a;
+    color: white;
+}
+
+/* Status message for local demo */
+.status-msg {
+    display: none;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    max-width: 650px;
+}
+
+.status-msg.success {
+    display: block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.status-msg.info {
+    display: block;
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #90caf9;
+}
+
+/* --- Simple Static Student Footer --- */
+footer {
+    background-color: rgb(244, 191, 126);
+    padding: 16px 15px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: #333333;
+    border-top: 2px solid #d4a373;
+}
+
+.footer-nav {
+    margin-bottom: 8px;
+}
+
+.footer-nav a {
+    color: #552408;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 4px 0;
+    font-size: 13px;
+    color: #4a270f;
+}
+
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .brand-section h1 {
+        font-size: 24px;
+    }
+
+    #naviga, .navbar {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .navbar a {
+        font-size: 13px;
+        padding: 5px 9px;
+    }
+
+    .scheme-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-table {
+        width: 100%;
+    }
+}

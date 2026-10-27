@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        header {
+            background-color: bisque;
+            padding: 20px;
+            display: flex;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+            font-size: 40px;
+        }
+
+        .main {
+            padding: 20px;
+        }
+
+        .main > h1 {
+            font-size: 32px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 650px;
+            max-width: 100%;
+            background-color: white;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        td:first-child {
+            width: 180px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 95%;
+            padding: 7px;
+            box-sizing: border-box;
+        }
+
+        .hobby {
+            display: block;
+            margin: 6px 0;
+            font-weight: normal;
+        }
+
+        .button {
+            padding: 8px 18px;
+            margin: 3px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: rgb(244, 191, 126);
+            padding: 5px;
+            margin: 8px;
+            align-items: center;
+            font-size: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="navigation.css">
+</head>
+
+<body>
+
+<header>
+    <div id="header">
+        <div class="brand-section">
+            <img src="govt.png" width="120" height="50" alt="Government Logo">
+            <h1>Survey Commission of India</h1>
+        </div>
+
+        <div id="naviga">
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="why.html">Why This Website?</a>
+                <a href="about.html">About</a>
+                <a href="survey.html" class="active">Survey</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="main">
+    <h1>Registration Form</h1>
+
+    <form>
+        <table border="1" cellpadding="10">
+
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="birthdate">Birth Date:</label></td>
+                <td><input type="date" id="birthdate" name="birthdate" required></td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td><input type="tel" id="phone" name="phone" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="qualification">Qualification:</label></td>
+                <td>
+                    <select id="qualification" name="qualification" required>
+                        <option value="">-- Select Qualification --</option>
+                        <option value="10th">10th</option>
+                        <option value="12th">12th</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="graduate">Graduate</option>
+                        <option value="postgraduate">Post Graduate</option>
+                        <option value="phd">Ph.D.</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="nationality">Nationality:</label></td>
+                <td><input type="text" id="nationality" name="nationality" value="Indian" required></td>
+            </tr>
+
+            <tr>
+                <td>Interests / Hobbies:</td>
+                <td>
+                    <label class="hobby"><input type="checkbox" name="hobbies[]" value="coding"> Coding / Programming</label>
+                    <label class="hobby"><input type="checkbox" name="hobbies[]" value="web-development"> Web Development</label>
+                    <label class="hobby"><input type="checkbox" name="hobbies[]" value="app-development"> App Development</label>
+                    <label class="hobby"><input type="checkbox" name="hobbies[]" value="ai"> Artificial Intelligence</label>
+                    <label class="hobby"><input type="checkbox" name="hobbies[]" value="cybersecurity"> Cybersecurity</label>
+                    <label class="hobby"><input type="checkbox" name="hobbies[]" value="gaming"> Technology / Gaming</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="experience">Experience:</label></td>
+                <td>
+                    <textarea id="experience" name="experience" rows="5" cols="30"
+                    placeholder="Write about your technical experience..."></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td>
+                    <textarea id="address" name="address" rows="3" cols="30"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input class="button" type="submit" value="Submit">
+                    <input class="button" type="reset" value="Reset">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</section>
+
+<footer>
+    <div class="footer-nav">
+        <a href="index.html">Home</a> |
+        <a href="why.html">Why This Website?</a> |
+        <a href="about.html">About</a> |
+        <a href="survey.html">Survey</a> |
+        <a href="feedback.html">Feedback</a> |
+        <a href="login.html">Login</a>
+    </div>
+    <p>Survey Commission of India — Web Technologies College Mini Project</p>
+    <p>&copy; Government of India</p>
+</footer>
+
+<script>
+    // Handle form submit for local demo
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you! Your survey form has been submitted successfully (Static Demo).');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
